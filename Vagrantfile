@@ -9,7 +9,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", inline: <<-SHELL
     # Update package database and install required packages
     sudo apt update
-    sudo apt install git nano vim python-is-python3 python3-venv python3-pip
+    sudo apt install -y git nano vim python-is-python3 python3-venv python3-pip
 
     python -m venv flask_venv
     source flask_venv/bin/activate
