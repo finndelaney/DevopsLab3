@@ -1,0 +1,14 @@
+# Ignore the compiled executable
+hello
+
+# Ignore object files
+*.o
+
+# Ignore any backup files
+*~
+
+# Ignore VS Code settings
+.vscode/
+
+# Ignore macOS system files
+.DS_Store
