@@ -1,0 +1,21 @@
+name: C Build
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Build
+      run: |
+        make
+
+    - name: Upload build artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: built-program
+        path: prog
